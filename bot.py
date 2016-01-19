@@ -51,7 +51,7 @@ def echo(bot, update):
     if (checkWords(update.message.text, [u"шутка", u"шутеечка", u"шуточка", u"прикол", u"ржака"])):
         r = requests.get(JOKE_URL + "00")
         json = r.json()
-        bot.sendMessage(update.message.chat_id, text=re.sub('<[^<]+?>', '', json[random.randrange(0, 101, 2)]["elementPureHtml"]))
+        bot.sendMessage(update.message.chat_id, text=re.sub('<[^<]+?>', '', json[random.randrange(0, 100, 2)]["elementPureHtml"]))
 
     if (checkWords(update.message.text, [u"сиськи", u"сиська", u"сисяндра", u"сиси", u"сисю", u"булки", u"буфера"])):
         r = requests.get(BOOBS_API_URL)

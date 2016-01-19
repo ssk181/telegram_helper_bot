@@ -69,7 +69,7 @@ def jobJoke(bot):
 
 
 def checkWords(message, targetWords):
-    messageWords = re.sub("[!?.;:()]", " ", message.lower()).split(" ")
+    messageWords = re.sub("[!?.,;:()]", " ", message.lower()).split(" ")
     intersectWords = set(messageWords).intersection(targetWords)
     return True if len(intersectWords) > 0 else False
 
